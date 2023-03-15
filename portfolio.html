@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&family=Roboto+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- Navigation links -->
+    <iframe class="nav-panel" src="nav.html"></iframe>
+
+    <!--Projects-->
+    <div class="portfolio-presentation">
+      <h2>Ett av mina project</h2>
+      <p>
+        I kursen funktionell programmering fick vi i uppgift att importera
+        information från en databas till listor i vårt javaprogram, som sedan
+        skulle användas för att se statistik mm. Vi fick endast använda oss av
+        enkla SQL kommandon resterande skulle hanteras i java. <br /><br />
+        Jag vill visa upp just hur jag via ett interface "load" samlar in
+        informationen från databasen, gör om det till object och lägger i listor
+        till tillhörande foreign-key.
+      </p>
+
+      <ul>
+        <li>
+          <h3>Load()</h3>
+          <p>
+            Interfacet loadable implementeras av alla mina importklasser till
+            databasen
+          </p>
+          <img src="Images/Loadable.png" alt="Picture" />
+        </li>
+        <li>
+          <h3>ProductLoader</h3>
+          <p>
+            ProductLoader använder load() för att generera en produktlista. Jag
+            använder mig av enkel SQL och lägger sedan in varje element i ett
+            objekt "product" som jag skapar. sedan läggs objektet in i listan
+            productList
+          </p>
+          <img src="Images/ProductLoader.png" alt="Picture" />
+        </li>
+        <li>
+          <h3>RefreshLists</h3>
+          <p>
+            Varje gång mitt program utförde något, som tex ett köp eller på
+            annat sätt ändrade i databasen kördes en metod refreshLists som
+            uppdaterade alla listor och satte in i de klasser som använde sig av
+            foreign-keys
+          </p>
+          <img src="Images/refreshLists.png" alt="Picture" />
+        </li>
+      </ul>
+
+      <a href="https://github.com/RTerBorch/JavaDatabas" target="_blank"
+        >Här finner du mitt projekt på github</a
+      >
+    </div>
+    <footer>
+      <hr />
+      <p>Copyright &copy; 2023 – Robin Ter-Borch – robin.ter.borch@gmail.com</p>
+    </footer>
+  </body>
+</html>
